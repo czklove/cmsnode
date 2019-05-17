@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "ee-first": "^1.1.1",
+    "express": "^4.17.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.8.6",
+    "tedious": "^6.1.1"
+  },
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "node": "express.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node bin/express.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
