@@ -8,3 +8,5 @@ app.get('/',(req,res)=>{
     user.getuserlist(req,res);
 })
 app.listen(prot)
+
+console.log('服务器启动成功')

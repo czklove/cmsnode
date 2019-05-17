@@ -1,23 +1,9 @@
-/* 封装的连接数据库的模块 */
-var pool = require('../database/index.js')
-
-/* 引入统一管理的sql模块 */
-var queryuser = require('../database/querysql/queryuser.js')
-
-var disconnect = require('../unit/handleDisconnect.js')
+var user = require('../database/model/sequser.js')
 /* 获取用户列表 */
 const getuserlist = function(req,res) {
-    pool.query(queryuser.all,function(err,rews){
-        if(err) {
-            res.writeHead(404,{'Content-Type':'application/json'})
-            res.end(err)
-        } else {
-            rews = (JSON.stringify(rews))
-            res.writeHead(200,{'Content-Type':'application/json'})
-            res.end(rews.toString())
-        }
-    })
+    user.userlist();
     //disconnect(pool);
+    res.end('code:200')
 }
 module.exports = {
     getuserlist
