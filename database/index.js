@@ -15,7 +15,8 @@ let sequelize = new Sequelize(
           max: 20, // 连接池最大连接数量
           min: 0, // 连接池最小连接数量
           idle: 10000 // 每个线程最长等待时间
-        }
+        },
+        timezone: '+08:00' //东八时区
     }
 );
 module.exports = sequelize

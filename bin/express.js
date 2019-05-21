@@ -2,11 +2,9 @@
 var express = require('express');
 var app = express();
 var prot = 3210; // 服务启动的端口号
-var user = require('../api/userapi.js')
+var router = require('../route/index.js')
 
-app.get('/',(req,res)=>{
-    user.getuserlist(req,res);
-})
+app.use('/',router)
+
 app.listen(prot)
-
 console.log('服务器启动成功')
