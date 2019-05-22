@@ -6,16 +6,16 @@ var router = express.Router();
 var userroute = require('./userroute.js')
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
-  next();
+  next()
 });
 // define the home page route
-router.get('/', function(req, res) {
+router.get('/', function(req, res) {  
   res.send('Birds home page');
 });
 // define the about route
 router.get('/about', function(req, res) {
-  res.send('About birds');
+  console.log(req.query)
+  res.send('About birds'+req.query.id);
 });
 
 router.use('/user', userroute);
