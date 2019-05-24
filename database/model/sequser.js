@@ -138,6 +138,7 @@ const userlist = function () {
     console.log(1)
     return sequser.findAll({raw: true})
 }
+/* 添加 */
 const usercreate = function(model) {
     console.log(2)
     return sequser.create(model)
